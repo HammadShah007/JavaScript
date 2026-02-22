@@ -54,6 +54,45 @@ Notes:
 let someNumber = 33
 
 let stringNumber = String(someNumber)
-console.log(stringNumber);
-console.log(typeof stringNumber);
+// console.log(stringNumber);
+// console.log(typeof stringNumber);
 
+// **************** Operations ***************
+
+let value = 3;
+let negValue = -value;
+// console.log(negValue);
+
+// console.log(2+2);
+// console.log(2-2);
+// console.log(2*2);
+// console.log(2**3);
+// console.log(2/3);
+// console.log(4%2);
+
+let str1 = "Salam"
+let str2 = " Hammad"
+
+let str3 = str1 + str2
+// console.log(str3);
+
+// console.log("1" + 2);
+// console.log(1 + "2");
+// console.log("1" + 2 + 2);
+// console.log(1 + 2 + "2");
+
+// console.log(+true);
+
+let num1 = +"3"
+// console.log(typeof num1);
+
+let gameCounter = 100;
+gameCounter++;
+// console.log(gameCounter);
+
+let x = 5;
+let y = x++;
+let z = y++;
+console.log(x);
+console.log(y);
+console.log(z);
