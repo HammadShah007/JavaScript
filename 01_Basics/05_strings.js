@@ -44,7 +44,7 @@
 // Note: The charAt() method does not support negative integers as an index. If a negative integer is used, it will be treated as Nill. Therefore, sentence.charAt(-6) will return the character at index Nill which is an empty string. Hence, the output will be "The character at index -6 is " (with nothing after "is").
 
 
-// charCodeAt()
+// -------**************  charCodeAt()  **************-------
 // Examples
 
 // const sentence = "The quick brown fox jumps over the lazy dog.";
