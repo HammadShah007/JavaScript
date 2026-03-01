@@ -116,37 +116,138 @@
 // -------**************  concat()  **************-------
 // Examples
 
-let user = "Hassan";
-let message = "Welcome back, ".concat(user, "!");
+// let user = "Hassan";
+// let message = "Welcome back, ".concat(user, "!");
 // console.log(message);
 
 // Tricky interview question: What will be the output of the following code?
 
-let a = "Salam";
-let b = a.concat(" World");
+// let a = "Salam";
+// let b = a.concat(" World");
 
-a = "Hello";
+// a = "Hello";
 
-let c = b.concat(" Everyone");
+// let c = b.concat(" Everyone");
 
-console.log(a);
-console.log(b);
-console.log(c);
+// console.log(a);
+// console.log(b);
+// console.log(c);
 
 // Note:Modern backend development mai template literals preferred hote hain kyunki readable, maintainable aur optimized hote hain. Performance difference negligible hota hai except heavy loops.
 
-// constructor String()
-// endsWith()
-// fixed()
-// fontcolor()
-// fontsize()
-// includes()
-// indexOf()
-// isWellFormed()
-// italics()
-// lastIndexOf()
-// length
-// link()
+
+// -------**************  constructor String()  **************-------
+// Examples
+
+// let a = new String("Hammad");
+
+// let b = String(a);
+
+// console.log(typeof a);
+// console.log(typeof b);
+// console.log(`Salam ${b}`);
+
+
+// note: The String() constructor creates a new String object. When you use the new keyword with String(), it creates an object wrapper around the string value. This means that a is an object, while b is a primitive string. When you use template literals or string concatenation, JavaScript automatically converts the String object to a primitive string, which is why you can use b in the template literal without any issues. However, it's generally recommended to use string literals (e.g., let a = "Hammad";) instead of the String() constructor for better performance and simplicity.
+
+
+// -------**************  startsWith()  **************-------
+// Examples
+
+// const str = "Saturday night plans";
+
+// console.log(str.startsWith("Sat"));
+// Expected output: true
+
+// console.log(str.startsWith("Sat", 3));
+// Expected output: false
+
+
+// const str = "To be, or not to be, that is the question.";
+
+// console.log(str.startsWith("To be")); // true
+// console.log(str.startsWith("not to be")); // false
+// console.log(str.startsWith("ot to be", 11)); // true
+
+// Note:
+// startsWith(searchstring, position); // true if the characters in searchstring are found at the beginning of the string, starting at position. Otherwise, false.
+
+
+// -------**************  endsWith()  **************-------
+// Examples
+
+// const str1 = "Cats are the best!";
+
+// console.log(str1.endsWith("best!"));
+// Expected output: true
+
+// console.log(str1.endsWith("best", 17));
+// Expected output: true
+
+// const str2 = "Is this a question?";
+
+// console.log(str2.endsWith("question"));
+// Expected output: false
+
+// Note:
+// endsWith(searchstring, length); // true if the characters in searchstring are found at the end of the string, considering only up to length characters. Otherwise, false.
+
+
+// -------**************  includes()  **************-------
+// Examples
+
+// const sentence = "The quick brown fox jumps over the lazy dog.";
+
+// const word = "lazy";
+
+// console.log(
+//   `The word "${word}" ${sentence.includes(word) ? "is" : "is not"} in the sentence`,
+// );
+// Expected output: "The word "lazy" is in the sentence"
+
+// Note: includes(searchstring, position); // true if the characters in searchstring are found in the string, starting at position. Otherwise, false.
+
+
+// -------**************  indexOf()  **************-------
+// Examples
+
+// const paragraph = "I think Ruth's dog is cuter than your dog!";
+
+// const searchName = "o";
+// const firstIndexOf = paragraph.indexOf(searchName);
+
+// console.log(`The index of the first "${searchName}" is ${firstIndexOf}`);
+// Expected output: "The index of the first "dog" is 15"
+
+// console.log(`The index of the second "${searchName}" is ${paragraph.indexOf(searchName, firstIndexOf + 1,)}`);
+// Expected output: "The index of the second "dog" is 38"
+
+// Note: indexOf(searchValue, fromIndex) returns the index of the first occurrence of searchValue in the string, starting the search at fromIndex. If searchValue is not found, it returns -1. To find subsequent occurrences, you can use the index of the previous occurrence plus one as the new fromIndex.
+
+
+// -------**************  lastIndexOf()  **************-------
+// Examples
+
+const paragraph = "I think Ruth's dog is cuter than your dog!";
+
+const searchName = "dog";
+
+const lastIndexOf = paragraph.indexOf(searchName);
+
+console.log(
+    `The index of the first "${searchName}" is ${lastIndexOf}`
+);
+// Expected output: "The index of the first "dog" is 15"
+
+console.log(
+  `Index of the last "${searchName}" is ${paragraph.lastIndexOf(searchName, lastIndexOf + 1)}`,
+);
+// Expected output: "Index of the last "dog" is 38"
+
+// Note: lastIndexOf(searchValue, fromIndex) returns the index of the last occurrence of searchValue in the string, searching backwards from fromIndex. If searchValue is not found, it returns -1. If fromIndex is not provided, it defaults to the length of the string, meaning the search starts from the end of the string.
+
+
+
 // localeCompare()
 // match()
 // matchAll()
@@ -160,7 +261,6 @@ console.log(c);
 // slice()
 // small()
 // split()
-// startsWith()
 // strike()
 // sub()
 // substr()
@@ -175,10 +275,6 @@ console.log(c);
 // trim()
 // trimEnd()
 // trimStart()
-// trimEnd()
-// trimStart()
 // valueOf()
-
-// let name2 = "hammad";
-// let result = `${name2.charAt(0).toUpperCase()}${name2.slice(1)}`;
-// console.log(result);
+// isWellFormed()
+// length
