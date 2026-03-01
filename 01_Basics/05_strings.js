@@ -228,53 +228,139 @@
 // -------**************  lastIndexOf()  **************-------
 // Examples
 
-const paragraph = "I think Ruth's dog is cuter than your dog!";
+// const paragraph = "I think Ruth's dog is cuter than your dog!";
 
-const searchName = "dog";
+// const searchName = "dog";
 
-const lastIndexOf = paragraph.indexOf(searchName);
+// const lastIndexOf = paragraph.indexOf(searchName);
 
-console.log(
-    `The index of the first "${searchName}" is ${lastIndexOf}`
-);
-// Expected output: "The index of the first "dog" is 15"
+// console.log(
+//     `The index of the first "${searchName}" is ${lastIndexOf}`
+// );
+// // Expected output: "The index of the first "dog" is 15"
 
-console.log(
-  `Index of the last "${searchName}" is ${paragraph.lastIndexOf(searchName, lastIndexOf + 1)}`,
-);
+// console.log(
+//   `Index of the last "${searchName}" is ${paragraph.lastIndexOf(searchName, lastIndexOf + 1)}`,
+// );
 // Expected output: "Index of the last "dog" is 38"
 
 // Note: lastIndexOf(searchValue, fromIndex) returns the index of the last occurrence of searchValue in the string, searching backwards from fromIndex. If searchValue is not found, it returns -1. If fromIndex is not provided, it defaults to the length of the string, meaning the search starts from the end of the string.
 
 
+// -------**************  localeCompare()  **************-------
+// Examples
 
-// localeCompare()
-// match()
-// matchAll()
-// normalize()
-// padEnd()
-// padStart()
-// repeat()
-// replace()
-// replaceAll()
-// search()
-// slice()
-// small()
-// split()
-// strike()
-// sub()
-// substr()
+// const a = "réservé"; // With accents, lowercase
+// const b = "RESERVE"; // No accents, uppercase
+
+// console.log(a.localeCompare(b));
+// // Expected output: 1
+// console.log(a.localeCompare(b, "en", { sensitivity: "base" }));
+// // Expected output: 0
+
+// Note: The localeCompare() method compares two strings in the current locale and returns a number indicating whether the reference string comes before, after, or is the same as the compared string in sort order. The method can take optional parameters to specify the locale and comparison options, allowing for more accurate comparisons based on language-specific rules. In the example above, the first comparison considers accents and case, resulting in a positive value (1) because "réservé" is considered greater than "RESERVE". The second comparison ignores accents and case (sensitivity: "base"), resulting in 0, indicating that the strings are considered equivalent for sorting purposes.
+
+
+// -------**************  match()  **************-------
+// Examples
+
+
+// let str = "Hello Hammad";
+
+// console.log(str.match("Hammad"));
+
+// let str = "Hammad123";
+
+// console.log(str.match(/[0-9]/));
+
+let str = "Hammad123";
+
+console.log(str.match(/[0-9]/g));
+
+
+
+
+// -------**************  matchAll()  **************-------
+// Examples
+
+// -------**************  normalize()  **************-------
+// Examples
+
+// -------**************  padEnd()  **************-------
+// Examples
+
+// -------**************  padStart()  **************-------
+// Examples
+
+// -------**************  repeat()  **************-------
+// Examples
+
+// -------**************  replace()  **************-------
+// Examples
+
+// -------**************  replaceAll()  **************-------
+// Examples
+
+// -------**************  search()  **************-------
+// Examples
+
+// -------**************  slice()  **************-------
+// Examples
+// 
+// -------**************  small()  **************-------
+// Examples
+// 
+// -------**************  split()  **************-------
+// Examples
+// 
+// -------**************  strike()  **************-------
+// Examples
+// 
+// -------**************  sub()  **************-------
+// Examples
+// 
+// -------**************  substr()  **************-------
+// Examples
+// 
+// -------**************  lastIndexOf()  **************-------
+// Examples
 // substring()
+// -------**************  lastIndexOf()  **************-------
+// Examples
 // sup()
+// -------**************  lastIndexOf()  **************-------
+// Examples
 // toLocaleLowerCase()
+// -------**************  lastIndexOf()  **************-------
+// Examples
 // toLocaleUpperCase()
+// -------**************  lastIndexOf()  **************-------
+// Examples
 // toLowerCase()
+// -------**************  lastIndexOf()  **************-------
+// Examples
 // toString()
+// -------**************  lastIndexOf()  **************-------
+// Examples
 // toUpperCase()
+// -------**************  lastIndexOf()  **************-------
+// Examples
 // toWellFormed()
+// -------**************  lastIndexOf()  **************-------
+// Examples
 // trim()
+// -------**************  lastIndexOf()  **************-------
+// Examples
 // trimEnd()
+// -------**************  lastIndexOf()  **************-------
+// Examples
 // trimStart()
+// -------**************  lastIndexOf()  **************-------
+// Examples
 // valueOf()
+// -------**************  lastIndexOf()  **************-------
+// Examples
 // isWellFormed()
+// -------**************  lastIndexOf()  **************-------
+// Examples
 // length
