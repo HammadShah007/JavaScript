@@ -273,9 +273,11 @@
 
 // console.log(str.match(/[0-9]/));
 
-let str = "Hammad123";
+// let str = "HamMad123";
 
-console.log(str.match(/[0-9]/g));
+// console.log(str.match(/[A-Z]/g));
+
+// Note: The match() method retrieves the result of matching a string against a regular expression. It returns an array of matches or null if no matches are found. In the example above, str.match(/[A-Z]/g) returns an array of all uppercase letters in the string "HamMad123", which are "H", "M", and "M". The 'g' flag in the regular expression indicates a global search, meaning it will find all matches rather than stopping after the first match.
 
 
 
@@ -285,6 +287,29 @@ console.log(str.match(/[0-9]/g));
 
 // -------**************  normalize()  **************-------
 // Examples
+
+// const name1 = "\u0041\u006d\u00e9\u006c\u0069\u0065";
+// const name2 = "\u0041\u006d\u0065\u0301\u006c\u0069\u0065";
+
+// console.log(`${name1}, ${name2}`);
+// // Expected output: "Amélie, Amélie"
+// console.log(name1 === name2);
+// // Expected output: false
+// console.log(name1.length === name2.length);
+// // Expected output: false
+
+// const name1NFC = name1.normalize("NFC");
+// const name2NFC = name2.normalize("NFC");
+
+// console.log(`${name1NFC}, ${name2NFC}`);
+// // Expected output: "Amélie, Amélie"
+// console.log(name1NFC === name2NFC);
+// // Expected output: true
+// console.log(name1NFC.length === name2NFC.length);
+// // Expected output: true
+
+// Note: The normalize() method in JavaScript is used to convert a string into a normalized form, which can be useful for comparing strings that may have different Unicode representations. In the example above, name1 and name2 represent the same name "Amélie" but are composed of different Unicode characters. When we normalize both strings using NFC (Normalization Form C), they become identical in terms of their Unicode representation, allowing for accurate comparison and consistent length.
+
 
 // -------**************  padEnd()  **************-------
 // Examples
