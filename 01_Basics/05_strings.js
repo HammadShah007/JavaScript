@@ -395,74 +395,109 @@
 // -------**************  search()  **************-------
 // Examples
 
-const paragraph = "I think Ruth's dog is cuter than your dog!";
+// const paragraph = "I think Ruth's dog is cuter than your dog!";
 
-const regex = /[a-z]/g;
+// const regex = /[a-z]/g;
 
-console.log(paragraph.search(regex));
-console.log(paragraph[paragraph.search(regex)]);
+// console.log(paragraph.search(regex));
+// console.log(paragraph[paragraph.search(regex)]);
 
 //Note: The search() method executes a search for a match between a regular expression and this String object. It returns the index of the first match, or -1 if no match was found. In the example above, paragraph.search(regex) returns the index of the first lowercase letter in the string, which is 2 (the letter "h" in "think"). The second console.log retrieves the character at that index, confirming that it is indeed "h".
 
 
-
 // -------**************  slice()  **************-------
 // Examples
-// 
-// -------**************  small()  **************-------
-// Examples
-// 
+
+// const str = "The quick brown fox jumps over the lazy dog.";
+
+// console.log(str.slice(31));
+// // Expected output: "the lazy dog."
+
+// console.log(str.slice(4, 19));
+// // Expected output: "quick brown fox"
+
+// console.log(str.slice(-4));
+// // Expected output: "dog."
+
+// console.log(str.slice(-9, -5));
+// // Expected output: "lazy"
+
+
+// let str2 = "1234567890";
+
+// console.log(str2.slice(5, 9));
+
+// let str3 = "Hello World";
+
+// console.log(str3.slice(4, 8));
+// console.log(str3.slice(4));
+
+//Note: The slice() method extracts a section of a string and returns it as a new string, without modifying the original string. It takes two parameters: the start index and the end index (optional). If the end index is not provided, it slices until the end of the string. Negative indices can be used to slice from the end of the string. In the examples above, various slices of the original strings are extracted based on the specified indices.
+
+
+
+ 
 // -------**************  split()  **************-------
 // Examples
-// 
-// -------**************  strike()  **************-------
+
+const str = "The quick brown fox jumps over the lazy dog.";
+
+const words = str.split(" ");
+console.log(words[3]);
+// Expected output: "fox"
+
+const chars = str.split("");
+console.log(chars[8]);
+// Expected output: "k"
+
+const strCopy = str.split();
+console.log(strCopy);
+// Expected output: Array ["The quick brown fox jumps over the lazy dog."]
+
+let strSecond = str.split(" ", 4);
+console.log(strSecond[2]);
+// Expected output: Array ["The", "quick", "brown", "fox"]
+
+//Note: The split() method divides a String into an ordered list of substrings, puts these substrings into an array, and returns the array. The division is done by searching for a pattern; where the pattern is provided as the first parameter in the method's call. The second parameter is a limit on the number of splits to be found. In the examples above, str.split(" ") splits the string into an array of words, while str.split("") splits it into an array of individual characters. The str.split() with no arguments returns an array containing the entire string as a single element. The last example demonstrates how to limit the number of splits to 4, resulting in an array of the first four words.
+
+
+// -------**************  substring()  **************-------
 // Examples
-// 
-// -------**************  sub()  **************-------
+
+
+// -------**************  toLocaleLowerCase()  **************-------
 // Examples
-// 
-// -------**************  substr()  **************-------
+
+// -------**************  toLocaleUpperCase()  **************-------
 // Examples
-// 
-// -------**************  lastIndexOf()  **************-------
+
+// -------**************  toLowerCase()  **************-------
 // Examples
-// substring()
-// -------**************  lastIndexOf()  **************-------
+
+// -------**************  toString()  **************-------
 // Examples
-// sup()
-// -------**************  lastIndexOf()  **************-------
+
+// -------**************  toUpperCase()  **************-------
 // Examples
-// toLocaleLowerCase()
-// -------**************  lastIndexOf()  **************-------
+
+// -------**************  toWellFormed()  **************-------
 // Examples
-// toLocaleUpperCase()
-// -------**************  lastIndexOf()  **************-------
+
+// -------**************  trim()  **************-------
 // Examples
-// toLowerCase()
-// -------**************  lastIndexOf()  **************-------
+
+// -------**************  trimEnd()  **************-------
 // Examples
-// toString()
-// -------**************  lastIndexOf()  **************-------
+
+// -------**************  trimStart()  **************-------
 // Examples
-// toUpperCase()
-// -------**************  lastIndexOf()  **************-------
+
+// -------**************  valueOf()  **************-------
 // Examples
-// toWellFormed()
-// -------**************  lastIndexOf()  **************-------
+
+// -------**************  isWellFormed()  **************-------
 // Examples
-// trim()
-// -------**************  lastIndexOf()  **************-------
-// Examples
-// trimEnd()
-// -------**************  lastIndexOf()  **************-------
-// Examples
-// trimStart()
-// -------**************  lastIndexOf()  **************-------
-// Examples
-// valueOf()
-// -------**************  lastIndexOf()  **************-------
-// Examples
-// isWellFormed()
+
 // -------**************  lastIndexOf()  **************-------
 // Examples
 // length
