@@ -314,20 +314,97 @@
 // -------**************  padEnd()  **************-------
 // Examples
 
+// const str1 = "Breaded Mushrooms";
+
+// console.log(str1.padEnd(25, "."));
+// // Expected output: "Breaded Mushrooms........"
+
+// const str2 = "200";
+
+// console.log(str2.padEnd(5));
+// // Expected output: "200  "
+
+//Note: The padEnd() method pads the current string with a given string (repeated, if needed) until the resulting string reaches the given length. The padding is applied from the end of the current string. If the padding string is not provided, it defaults to a space character. In the example above, str1.padEnd(25, ".") pads the string "Breaded Mushrooms" with periods until it reaches a total length of 25 characters, while str2.padEnd(5) pads the string "200" with spaces until it reaches a total length of 5 characters.
+
+
 // -------**************  padStart()  **************-------
 // Examples
+
+// const str = "5";
+
+// console.log(str.padStart(2, "0"));
+// // Expected output: "05"
+
+// const fullNumber = "2034399002125581";
+// const last4Digits = fullNumber.slice(-4);
+// const maskedNumber = last4Digits.padStart(fullNumber.length, "*");
+
+// console.log(maskedNumber);
+// // Expected output: "************5581"
+
+
+//Note: The padStart() method pads the current string with a given string (repeated, if needed) until the resulting string reaches the given length. The padding is applied from the start of the current string. In the example above, str.padStart(2, "0") pads the string "5" with a "0" at the beginning to make it two characters long, resulting in "05". In the second example, we take the last 4 digits of a full credit card number and pad it with asterisks (*) at the start to mask all but the last 4 digits, resulting in "************5581".
+
 
 // -------**************  repeat()  **************-------
 // Examples
 
+// const mood = "Happy! ";
+
+// console.log(`I feel ${mood.repeat(3)}`);
+// // Expected output: "I feel Happy! Happy! Happy! "
+
+
+//Note: The repeat() method constructs and returns a new string which contains the specified number of copies of the string on which it was called, concatenated together. In the example above, mood.repeat(3) creates a new string that consists of the original string "Happy! " repeated three times, resulting in "Happy! Happy! Happy! ".
+
+
 // -------**************  replace()  **************-------
 // Examples
+
+// const paragraph = "I think Ruth's dog is cuter than your dog!";
+
+// console.log(paragraph.replace("Ruth's", "my"));
+// // Expected output: "I think my dog is cuter than your dog!"
+
+// const regex = /dog/i;
+// console.log(paragraph.replace(regex, "ferret"));
+// // Expected output: "I think Ruth's ferret is cuter than your dog!"
+
+// console.log(paragraph);
+
+
+//Note: The replace() method returns a new string with some or all matches of a pattern replaced by a replacement. The pattern can be a string or a regular expression, and the replacement can be a string or a function to be called for each match. In the example above, the first replace() call replaces "Ruth's" with "my", while the second replace() call uses a regular expression to replace the first occurrence of "dog" (case-insensitive) with "ferret". The original string remains unchanged, and the method returns a new modified string.
+
 
 // -------**************  replaceAll()  **************-------
 // Examples
 
+// const paragraph = "I think Ruth's dog is cuter than your dog!";
+
+// console.log(paragraph.replaceAll("dog", "monkey"));
+// // Expected output: "I think Ruth's monkey is cuter than your monkey!"
+
+// // Global flag required when calling replaceAll with regex
+// const regex = /dog/gi;
+// console.log(paragraph.replaceAll(regex, "ferret"));
+// // Expected output: "I think Ruth's ferret is cuter than your ferret!"
+
+//Note: The replaceAll() method returns a new string with all matches of a pattern replaced by a replacement. The pattern can be a string or a regular expression, and the replacement can be a string or a function to be called for each match. In the example above, replaceAll("dog", "monkey") replaces all occurrences of "dog" with "monkey". When using a regular expression with replaceAll(), the global flag (g) must be included to ensure that all matches are replaced, as shown in the second example where /dog/gi replaces all occurrences of "dog" (case-insensitive) with "ferret". The original string remains unchanged, and the method returns a new modified string.
+
+
 // -------**************  search()  **************-------
 // Examples
+
+const paragraph = "I think Ruth's dog is cuter than your dog!";
+
+const regex = /[a-z]/g;
+
+console.log(paragraph.search(regex));
+console.log(paragraph[paragraph.search(regex)]);
+
+//Note: The search() method executes a search for a match between a regular expression and this String object. It returns the index of the first match, or -1 if no match was found. In the example above, paragraph.search(regex) returns the index of the first lowercase letter in the string, which is 2 (the letter "h" in "think"). The second console.log retrieves the character at that index, confirming that it is indeed "h".
+
+
 
 // -------**************  slice()  **************-------
 // Examples
