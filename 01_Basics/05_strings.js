@@ -539,24 +539,66 @@
 //Note: The toUpperCase() method returns the calling string value converted to uppercase. It does not take any parameters and is not locale-sensitive, meaning it will convert characters to uppercase based on the default Unicode case mappings without considering locale-specific rules. In the example above, the original sentence is converted to all uppercase letters, resulting in "THE QUICK BROWN FOX JUMPS OVER THE LAZY DOG.".
 
 
-// -------**************  toWellFormed()  **************-------
-// Examples
-
 // -------**************  trim()  **************-------
 // Examples
+
+// const greeting = "   Hello world!   ";
+
+// console.log(greeting);
+// // Expected output: "   Hello world!   ";
+
+// console.log(greeting.trim());
+// // Expected output: "Hello world!";
+
+//Note: The trim() method removes whitespace from both ends of a string. It does not modify the original string but returns a new string with the leading and trailing whitespace removed. In the example above, the original string "   Hello world!   " contains spaces at both the beginning and the end. When we call greeting.trim(), it returns "Hello world!" without the extra spaces, while the original greeting variable remains unchanged.
+
 
 // -------**************  trimEnd()  **************-------
 // Examples
 
+// const greeting = "   Hello world!   ";
+
+// console.log(greeting);
+// // Expected output: "   Hello world!   ";
+
+// console.log(greeting.trimEnd());
+// // Expected output: "   Hello world!";
+
+//Note: The trimEnd() method removes whitespace from the end of a string. It does not modify the original string but returns a new string with the trailing whitespace removed. In the example above, the original string "   Hello world!   " contains spaces at both the beginning and the end. When we call greeting.trimEnd(), it returns "   Hello world!" with the spaces removed from the end, while the original greeting variable remains unchanged. trimRight() is an alias for trimEnd().
+
+
 // -------**************  trimStart()  **************-------
 // Examples
+
+// const greeting = "   Hello world!   ";
+
+// console.log(greeting);
+// // Expected output: "   Hello world!   ";
+
+// console.log(greeting.trimStart());
+// // Expected output: "Hello world!   ";
+
+//Note: The trimStart() method removes whitespace from the beginning of a string. It does not modify the original string but returns a new string with the leading whitespace removed. In the example above, the original string "   Hello world!   " contains spaces at both the beginning and the end. When we call greeting.trimStart(), it returns "Hello world!   " with the spaces removed from the beginning, while the original greeting variable remains unchanged. trimLeft() is an alias for trimStart().
+
 
 // -------**************  valueOf()  **************-------
 // Examples
 
-// -------**************  isWellFormed()  **************-------
+// const stringObj = new String("foo");
+
+// console.log(stringObj);
+// // Expected output: String { "foo" }
+
+// console.log(stringObj.valueOf());
+// // Expected output: "foo"
+
+//Note: The valueOf() method returns the primitive value of a String object. In the example above, stringObj is a String object created using the String constructor. When we call stringObj.valueOf(), it returns the primitive string value "foo" that is wrapped by the String object. This method is useful for retrieving the underlying primitive value from an object wrapper, especially when working with objects that have custom valueOf() implementations.
+
+
+// -------**************  length  **************-------
 // Examples
 
-// -------**************  lastIndexOf()  **************-------
-// Examples
-// length
+const str = "Life , the universe and everything. Answer:";
+
+console.log(`${str} ${str.length}`);
+// Expected output: "Life, the universe and everything. Answer: 42"
