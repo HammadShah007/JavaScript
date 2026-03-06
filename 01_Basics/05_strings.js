@@ -440,22 +440,22 @@
 // -------**************  split()  **************-------
 // Examples
 
-const str = "The quick brown fox jumps over the lazy dog.";
+// const str = "The quick brown fox jumps over the lazy dog.";
 
-const words = str.split(" ");
-console.log(words[3]);
-// Expected output: "fox"
+// const words = str.split(" ");
+// console.log(words[3]);
+// // Expected output: "fox"
 
-const chars = str.split("");
-console.log(chars[8]);
-// Expected output: "k"
+// const chars = str.split("");
+// console.log(chars[8]);
+// // Expected output: "k"
 
-const strCopy = str.split();
-console.log(strCopy);
-// Expected output: Array ["The quick brown fox jumps over the lazy dog."]
+// const strCopy = str.split();
+// console.log(strCopy);
+// // Expected output: Array ["The quick brown fox jumps over the lazy dog."]
 
-let strSecond = str.split(" ", 4);
-console.log(strSecond[2]);
+// let strSecond = str.split(" ", 4);
+// console.log(strSecond[2]);
 // Expected output: Array ["The", "quick", "brown", "fox"]
 
 //Note: The split() method divides a String into an ordered list of substrings, puts these substrings into an array, and returns the array. The division is done by searching for a pattern; where the pattern is provided as the first parameter in the method's call. The second parameter is a limit on the number of splits to be found. In the examples above, str.split(" ") splits the string into an array of words, while str.split("") splits it into an array of individual characters. The str.split() with no arguments returns an array containing the entire string as a single element. The last example demonstrates how to limit the number of splits to 4, resulting in an array of the first four words.
@@ -464,21 +464,80 @@ console.log(strSecond[2]);
 // -------**************  substring()  **************-------
 // Examples
 
+// const str = "Mozilla";
+
+// console.log(str.substring(1, 3));
+// // Expected output: "oz"
+
+// console.log(str.substring(2));
+// // Expected output: "zilla"
+
+// console.log(str.substring(3, 6));
+
+//Note: The substring() method returns a portion of the string between the start index and the end index (exclusive). If the end index is not provided, it extracts characters to the end of the string. If either index is less than 0 or NaN, it is treated as 0. If either index is greater than the length of the string, it is treated as the length of the string. If start index is greater than end index, substring() swaps them. In the examples above, str.substring(1, 3) returns "oz", str.substring(2) returns "zilla", and str.substring(3, 6) returns "ill". first perameter is starting index and second parameter is ending character (exclusive).
+
 
 // -------**************  toLocaleLowerCase()  **************-------
 // Examples
 
+// const dotted = "English";
+
+// console.log(`EN-US: ${dotted.toLocaleLowerCase("en-US")}`);
+// // Expected output: "i̇stanbul"
+
+// console.log(`TR: ${dotted.toLocaleLowerCase("tr")}`);
+// // Expected output: "istanbul"
+
+
+//Note: The toLocaleLowerCase() method returns the calling string value converted to lower case, according to any locale-specific case mappings. In the example above, the string "English" is converted to lowercase using both the "en-US" and "tr" locales. The output demonstrates how locale-specific rules can affect the resulting lowercase string, particularly with characters that have different case mappings in different languages (e.g., the dotted "i" in Turkish).
+
+
 // -------**************  toLocaleUpperCase()  **************-------
 // Examples
+
+// const city = "istanbul";
+
+// console.log(city.toLocaleUpperCase("en-US"));
+// // Expected output: "ISTANBUL"
+
+// console.log(city.toLocaleUpperCase("TR"));
+// // Expected output: "İSTANBUL"
+
+//Note: The toLocaleUpperCase() method returns the calling string value converted to upper case, according to any locale-specific case mappings. In the example above, the string "istanbul" is converted to uppercase using both the "en-US" and "TR" locales. The output demonstrates how locale-specific rules can affect the resulting uppercase string, particularly with characters that have different case mappings in different languages (e.g., the dotted "i" in Turkish).
 
 // -------**************  toLowerCase()  **************-------
 // Examples
 
+// const sentence = "The quick brown fox jumps over the lazy dog.";
+
+// console.log(sentence.toLowerCase());
+// // Expected output: "the quick brown fox jumps over the lazy dog."
+
+//Note: The toLowerCase() method returns the calling string value converted to lowercase. It does not take any parameters and is not locale-sensitive, meaning it will convert characters to lowercase based on the default Unicode case mappings without considering locale-specific rules. In the example above, the original sentence is converted to all lowercase letters, resulting in "the quick brown fox jumps over the lazy dog.".
+
 // -------**************  toString()  **************-------
 // Examples
 
+// const stringObj = new String("foo");
+
+// console.log(stringObj);
+// // Expected output: String { "foo" }
+
+// console.log(stringObj.toString());
+// // Expected output: "foo"
+
+//Note: The toString() method returns a string representing the specified object. In the example above, stringObj is a String object created using the String constructor. When we call stringObj.toString(), it returns the primitive string value "foo" that is wrapped by the String object. This method is useful for converting objects to their string representation, especially when dealing with objects that have custom toString() implementations.
+
 // -------**************  toUpperCase()  **************-------
 // Examples
+
+// const sentence = "The quick brown fox jumps over the lazy dog.";
+
+// console.log(sentence.toUpperCase());
+// // Expected output: "THE QUICK BROWN FOX JUMPS OVER THE LAZY DOG."
+
+//Note: The toUpperCase() method returns the calling string value converted to uppercase. It does not take any parameters and is not locale-sensitive, meaning it will convert characters to uppercase based on the default Unicode case mappings without considering locale-specific rules. In the example above, the original sentence is converted to all uppercase letters, resulting in "THE QUICK BROWN FOX JUMPS OVER THE LAZY DOG.".
+
 
 // -------**************  toWellFormed()  **************-------
 // Examples
