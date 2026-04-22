@@ -10,4 +10,9 @@
 
 (function Myiife(params) {
     console.log(`DB Connected`);
-})()
+})();
+
+
+( (name) => {
+    console.log(`DB CONNECTED TWO ${name}`);
+} )('hitesh')
